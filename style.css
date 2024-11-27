@@ -56,24 +56,12 @@ img {
 }
 
 /* Utility classes */
-/* Default is --spacer, can be overwritten with --flow-space */
 .flow-content > * + * {
   margin-top: var(--flow-space, var(--spacer));
 }
 
-.flow-content--large {
-  --flow-space: 3rem;
-}
-
 .text-accent {
   color: var(--clr-accent-500);
-}
-
-/* Keeps content from the side */
-.container {
-  padding: 0 var(--spacer);
-  max-width: 70rem;
-  margin: 0 auto;
 }
 
 /* general styling */
@@ -90,6 +78,8 @@ section {
   place-items: center;
   height: 100vh;
 }
+
+/* card styling */
 
 .card {
   width: 25em;

@@ -1,0 +1,121 @@
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* variables */
+
+:root {
+  --clr-accent-500: hsl(75, 94%, 57%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-700: hsl(0, 0%, 20%);
+  --clr-neutral-800: hsl(0, 0%, 12%);
+  --clr-neutral-900: hsl(0, 0%, 8%);
+  --spacer: 1rem;
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility classes */
+/* Default is --spacer, can be overwritten with --flow-space */
+.flow-content > * + * {
+  margin-top: var(--flow-space, var(--spacer));
+}
+
+.flow-content--large {
+  --flow-space: 3rem;
+}
+
+.text-accent {
+  color: var(--clr-accent-500);
+}
+
+/* Keeps content from the side */
+.container {
+  padding: 0 var(--spacer);
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+/* general styling */
+
+body {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--clr-neutral-800);
+  border-radius: var(--spacer);
+  padding: calc(var(--spacer) * 2);
+  text-align: center;
+  width: 25em;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 5em;
+  margin: 0 auto;
+}
+
+.card h1 {
+  --flow-space: calc(var(--spacer) * 2);
+}
+
+.card .text-accent {
+  --flow-space: calc(var(--spacer) / 2);
+}
+
+.card li {
+  margin: var(--spacer) 0;
+  padding: calc(var(--spacer) / 1.25);
+  background: var(--clr-neutral-700);
+  border-radius: calc(var(--spacer) / 2);
+}
+
+.card li a {
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
